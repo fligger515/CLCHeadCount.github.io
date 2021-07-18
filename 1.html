@@ -1,0 +1,68 @@
+Hypertext Markup Launguage(HTML) is the standard markup launguage for <strong>creating <u>web</u> pages</strong> and web applicaitions.
+
+<h1>h1 태그를 사용한 제목입니다.</h1>
+<h2>h2 태그를 사용한 제목입니다.</h2>
+<h3>h3 태그를 사용한 제목입니다.</h3>
+<h4>h4 태그를 사용한 제목입니다.</h4>
+<h5>h5 태그를 사용한 제목입니다.</h5>
+<h6>h6 태그를 사용한 제목입니다.</h6>
+
+안녕하십니까 한림대학교 19학번 김종현 입니다. 오늘 날씨가 진짜 좋았는데 다들 산책은 하셨는지요. <br>저가 오늘 소개해드릴 코드는 바로 웹프로그래밍의 html입니다.
+
+<br>
+<br>
+<br>
+
+<button id = "find-me">Show my location</button><br/>
+<p id = "status"></p>
+<a id = "map-link" target="_blank"></a>
+
+<script type="text/javascript">
+
+  function geoFindMe() {
+
+    const status = document.querySelector('#status');
+    const mapLink = document.querySelector('#map-link');
+
+    mapLink.href = '';
+    mapLink.textContent = '';
+
+    function success(position) {
+      const latitude  = position.coords.latitude;
+      const longitude = position.coords.longitude;
+
+      status.textContent = '';
+      mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+      mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+    }
+
+    function error() {
+      status.textContent = 'Unable to retrieve your location';
+    }
+
+    if(!navigator.geolocation) {
+      status.textContent = 'Geolocation is not supported by your browser';
+    } else {
+      status.textContent = 'Locating…';
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+
+  }
+
+  document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+</script>
+
+<table style = width:100%>
+  <tr style = "background-color:lightgray">
+    <th>참치</th> <!-- 각 열의 제목을 나타내며, 모든 내용은 자동으로 굵은 글씨에 가운데 정렬-->
+    <th>고래</th>
+<tr> <!--태그는 테이블에서 열을 구분해준다-->
+  <td>상어</td>
+  <td>문어</td>
+</tr>
+<tr>
+  <td>오징어</td> <!--열을 각각의 셀로 나누어준다 -->
+  <td>고등어</td>
+</tr>
+</table>
