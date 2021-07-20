@@ -63,7 +63,10 @@
       margin: auto;
       border: 10px solid rgb(254, 239, 239);
       background-color: white;
-      padding: 30px;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      padding-left: 10%;
+      padding-right: 10%;
     }
 
     footer {
@@ -89,7 +92,12 @@
       border-radius: 100px;
       box-shadow: 0px 3px 7px rgb(19, 130, 127, 0.5);
     }
-    .slide{height:300px;overflow:hidden;position:relative;}
+    #clubBTN:hover {
+      color: white;
+      background-color: skyblue;
+    }
+
+    .slide{height:300px; overflow:hidden;position:relative;}
     .slide ul{width:calc(100% * 4);display:flex;transition:1s;}
     .slide li{width:calc(100% / 4);height:300px;}
     .slide li:nth-child(1){background:#ffa;}
@@ -153,7 +161,6 @@
         <li>
           3F
         </li>
-
       </ul>
       <p class="bullet">
         <label for="pos1">1</label>
@@ -162,22 +169,6 @@
         <label for="pos4">4</label>
       </p>
     </div>
-    <script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"</script>
-    <script src="kakaoMpa.js"></script>
-    <div id="map" style="width:500px; height:400px;">
-
-      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=74be227fbeb967d990679c7d0524adf9"></script>
-      <script>
-        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-        var options = { //지도를 생성할 때 필요한 기본 옵션
-        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-        level: 3 //지도의 레벨(확대, 축소 정도)
-        };
-
-        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-      </script>
-    </div>
-
   </div>
   <footer>
     한림대학교 오픈SW 공모전
