@@ -32,51 +32,53 @@
     .titleDiv{
       text-align: right;
       float: left;
-      margin-left: 32%;
-      margin-right: 10px;
+
+      margin-top: 340px;
+      margin-bottom: 380px;
+      margin-left: 30%;
+      margin-right: 40px;
     }
-    .titleDiv > h1{
-      margin: 0px;
-      padding-top:380px;
+    .titleDiv > h1 {
+      margin-bottom: 5px;
 
       color: white;
       letter-spacing: 10px;
       font-size: 50px;
-      font-weight: bold;
       text-shadow: 0px 15px 7px rgba(15, 15, 15, 0.8);
     }
-    .titleDiv > h2{
-      margin-top:5px;
+    .titleDiv > h2 {
+      margin-top: 5px;
+
       letter-spacing: 7px;
       color: white;
-      text-decoration: none;
       text-shadow: 0px 10px 5px rgba(15, 15, 15, 0.8);
     }
-
     .loginDiv {
       float:left;
-      margin-left: 40px;
-      margin-top: 300px;
-      height: 200px;
-      padding-top: 100px;
+      margin-top: 310px;
+      margin-bottom: 400px;
+      padding-right: 20px;
+      padding-top: 80px;
       padding-left: 50px;
+      padding-bottom: 80px;
+
       border-left: 3px solid white;
     }
     .loginDiv > input {
       height: 20px;
       width: 150px;
-      margin: 7px;
+      margin-bottom: 8px;
       box-shadow: 0px 7px 5px rgba(15, 15, 15, 0.3);
       border-style: none;
 
       background-color: rgba(20, 20, 20, 0.7);
       color: white;
-
       letter-spacing: 3px;
-      text-align: center;
+      padding-left: 7px;
     }
-    .loginDiv-BTN {float: left; margin-top: 5px;}
     #loginBTN {
+      float: left;
+
       background-image: url();
       background-color: rgb(20, 20, 20);
       border-style: none;
@@ -85,8 +87,8 @@
 
       width: 80px;
       height: 70px;
-      margin-top: 395px;
-      margin-left: 10px;
+      margin-top: 400px;
+      margin-bottom: 400px;
 
       letter-spacing: 2px;
       font-size: 12px;
@@ -101,13 +103,16 @@
     <h2>CLC HeadCounting</h2>
   </div>
 
-  <div class="loginDiv">
-    <input type="text" /><br />
-    <input type="password" />
-  </div>
-  <div class="loginDiv-BTN">
-    <button id="loginBTN" type="submit">ENTER</button>
-  </div>
+  <form action=main.html>
+    <div class="loginDiv">
+      <input type="text" name="studentID" size=10 maxlength=8 placeholder="학번" autofocus /><br />
+      <input type="password" name="password" placeholder="비밀번호"/><br />
+      <input type="tel" name="phone" maxlength=11 placeholder="연락처" /><br />
+    </div>
+    <div class="loginDiv-BTN">
+      <button id="loginBTN" type="submit" value="login">ENTER</button>
+    </div>
+  </form>
 
   <footer>Hallym University Opensource competition ®Jeon Yu Bin 2021</footer>
 </body>
