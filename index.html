@@ -1,14 +1,3 @@
-<?php
-  $conn = mysqli_connect(
-  'localhost',
-  'root',
-  'fligger5151',
-  'clcheadcounting');
-
-  $sql = "SELECT * FROM user";
-  $result = mysqli_query($conn, $sql);
-?>
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -114,11 +103,9 @@
     <h2>CLC HeadCounting</h2>
   </div>
 
-  <form action=main.php method="post">
+  <form action=main.html>
     <div class="loginDiv">
-      <input type="text" name="studentID" size=10 maxlength=8 placeholder="학번" autofocus /><br />
-      <input type="password" name="password" placeholder="비밀번호"/><br />
-      <input type="tel" name="phone" maxlength=11 placeholder="연락처" /><br />
+      <
     </div>
     <div class="loginDiv-BTN">
       <button id="loginBTN" type="submit" value="login">ENTER</button>

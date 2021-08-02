@@ -114,7 +114,7 @@
     <h2>CLC HeadCounting</h2>
   </div>
 
-  <form action=main.php method="post">
+  <form action=Login_insert.php method="post">
     <div class="loginDiv">
       <input type="text" name="studentID" size=10 maxlength=8 placeholder="학번" autofocus /><br />
       <input type="password" name="password" placeholder="비밀번호"/><br />
