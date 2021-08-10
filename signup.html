@@ -1,14 +1,3 @@
-<?php
-  $conn = mysqli_connect(
-  'localhost',
-  'root',
-  'fligger5151',
-  'clcheadcounting');
-
-  $sql = "SELECT * FROM user";
-  $result = mysqli_query($conn, $sql);
-?>
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -110,21 +99,33 @@
 
 <body>
   <div class="titleDiv">
-    <h1>LOGIN</h1>
-    <h2>CLC HeadCounting</h2>
+    <h1>SIGN UP</h1>
+    <h2>CLC HeadCounting Name</h2>
   </div>
-
-  <form action=main.php method="post">
+  <form action="signin_input.php" method="post">
     <div class="loginDiv">
-      <input type="text" name="studentID" size=10 maxlength=8 placeholder="학번" autofocus /><br />
-      <input type="password" name="password" placeholder="비밀번호"/><br />
-      <input type="tel" name="phone" maxlength=11 placeholder="연락처" /><br />
+      <input type="text" name="stuID" size=10 maxlength=8 placeholder="student ID" autofocus /><br />
+      <input type="password" name="psswrd" placeholder="password"/><br />
+      <input type="text" name="phone" maxlength=11 placeholder="phone number" /><br />
     </div>
     <div class="loginDiv-BTN">
-      <button id="loginBTN" type="submit" value="login">ENTER</button>
+      <button id="loginBTN" type="submit" value="login">Sign Up</button>
     </div>
   </form>
 
-  <footer>Hallym University Opensource competition ®Jeon Yu Bin 2021</footer>
+  <script>
+    const signupForm = document.querySelector("#signup-form");
+    const signupButton = document.querySelector("#signup-button");
+    const password = document.querySelector("#password");
+    const passwordCheck = document.querySelector("#password-check");
+    signupButton.addEventListener("click", function(e) {
+      if(password.value&& password.value === passwordCheck.value){
+        signupForm.submit();
+      } else{
+        alert("비밀번호가 일치하지 않습니다");
+      }
+    });
+  </script>
+  <footer>Hallym University Opensource competition ®Jeon YuBin 2021</footer>
 </body>
 </html>
